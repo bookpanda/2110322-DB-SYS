@@ -1,4 +1,4 @@
 ```bash
-# list stored functions
+# list stored functions/procedures
 \df
 ```
