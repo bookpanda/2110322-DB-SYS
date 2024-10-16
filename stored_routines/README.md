@@ -2,9 +2,13 @@
 # list stored functions/procedures
 \df
 
+# list triggers
+\dS [table_name]
+
 # drop
 DROP FUNCTION get_all_customers_with_their_level()
 DROP PROCEDURE get_all_customers_with_their_level()
+DROP TRIGGER updating_new_address ON customer;
 ```
 
 ## Stored Procedures
