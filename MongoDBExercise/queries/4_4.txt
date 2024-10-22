@@ -32,7 +32,8 @@ db.getCollection('orders_w_lines').aggregate(
         product_description:
           '$product.product_name'
       }
-    }
+    },
+    { $sort: { product_id: 1 } }
   ],
   { maxTimeMS: 60000, allowDiskUse: true }
 );
