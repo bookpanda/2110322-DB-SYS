@@ -1,0 +1,12 @@
+1 order has many order_lines
+
+# one-to-few
+This is the current approach. We embed order_lines in order.
+
+# one-to-many
+when 1 order starts to have many order_lines, embedding whole order_lines in order may not be a good idea.
+Instead, we only embed order_lines' _id in order, and store order_lines in a separate collection.
+
+# one-to-squillions
+if 1 order has A LOT of order_lines, we should not embed order_lines in order.
+Instead, we should reference order's _id in order_lines.
